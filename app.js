@@ -98,7 +98,8 @@
                 <div class="food-tag">${item.tag}</div>
                 <img src="${item.img}" alt="${item.name}" loading="lazy">
                 <div class="food-name">${item.name}</div>
-                <div class="qty-row">
+                ${item.desc ? `<div style="font-size:clamp(11px, 2.5vw, 13px); opacity:0.7; font-weight:700; margin-top:-4px; margin-bottom:8px;">${item.desc}</div>` : ''}
+                <div class="qty-row" style="margin-top:auto;">
                     <div class="food-price">Rs ${item.price}</div>
                     ${btnHTML}
                 </div>
@@ -168,6 +169,7 @@
                 line.innerHTML = `
                     <div>
                         <div class="name">${item.name}</div>
+                        ${item.desc ? `<div style="font-size:11px; opacity:0.6; margin-top:2px; max-width:180px; line-height:1.2; font-weight:700;">${item.desc}</div>` : ''}
                         <div class="meta">Rs ${item.price}</div>
                     </div>
                     <div class="line-right">
@@ -316,6 +318,9 @@
             const lineTotal = item.price * qty;
             subtotal += lineTotal;
             msg += `${qty}x ${item.name} - Rs ${lineTotal}\n`;
+            if (item.desc) {
+                msg += `   (${item.desc})\n`;
+            }
         });
         
         const total = subtotal + config.deliveryFee;

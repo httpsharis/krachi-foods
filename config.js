@@ -16,15 +16,15 @@ window.KF_CONFIG = {
 
   menu: [
     // DEALS
-    {id:'d1', name:'Deal #1 (Zinger Burger, Fries, 345ml Drink)', price:590, cat:'Deals', tag:'Value', img:'images/burger.png'},
-    {id:'d2', name:'Deal #2 (Cheesy Shawarma, Fries, 345ml Drink)', price:590, cat:'Deals', tag:'Value', img:'images/shawarma.png'},
-    {id:'d3', name:'Deal #3 (1 Wrap, Fries, 345ml Drink)', price:820, cat:'Deals', tag:'Value', img:'images/shawarma.png'},
-    {id:'d4', name:'Deal #4 (1 Cheesy Grilled Sandwich, Loaded Fries, 2 Drinks)', price:999, cat:'Deals', tag:'For Two', img:'images/fries.png'},
-    {id:'d5', name:'Deal #5 (2 Zinger Burgers, Fries, 2 Drinks)', price:1140, cat:'Deals', tag:'For Two', img:'images/burger.png'},
-    {id:'d6', name:'Deal #6 (2 Cheesy Shawarmas, Fries, 2 Drinks)', price:1140, cat:'Deals', tag:'For Two', img:'images/shawarma.png'},
-    {id:'d7', name:'Deal #7 (1 Wrap, 1 Club Sandwich, Fries, 2 Drinks)', price:1470, cat:'Deals', tag:'Feast', img:'images/shawarma.png'},
-    {id:'d8', name:'Deal #8 (4 Zinger Burgers, 1L Drink)', price:1690, cat:'Deals', tag:'Family', img:'images/burger.png'},
-    {id:'d9', name:'Deal #9 (4 Signature Shawarmas, Fries, 1L Drink)', price:1750, cat:'Deals', tag:'Family', img:'images/shawarma.png'},
+    {id:'d1', name:'Deal #1', desc:'Zinger Burger, Fries, 345ml Drink', price:590, cat:'Deals', tag:'Value', img:'images/burger.png'},
+    {id:'d2', name:'Deal #2', desc:'Cheesy Shawarma, Fries, 345ml Drink', price:590, cat:'Deals', tag:'Value', img:'images/shawarma.png'},
+    {id:'d3', name:'Deal #3', desc:'1 Wrap, Fries, 345ml Drink', price:820, cat:'Deals', tag:'Value', img:'images/shawarma.png'},
+    {id:'d4', name:'Deal #4', desc:'1 Cheesy Grilled Sandwich, Loaded Fries, 2 Drinks', price:999, cat:'Deals', tag:'For Two', img:'images/fries.png'},
+    {id:'d5', name:'Deal #5', desc:'2 Zinger Burgers, Fries, 2 Drinks', price:1140, cat:'Deals', tag:'For Two', img:'images/burger.png'},
+    {id:'d6', name:'Deal #6', desc:'2 Cheesy Shawarmas, Fries, 2 Drinks', price:1140, cat:'Deals', tag:'For Two', img:'images/shawarma.png'},
+    {id:'d7', name:'Deal #7', desc:'1 Wrap, 1 Club Sandwich, Fries, 2 Drinks', price:1470, cat:'Deals', tag:'Feast', img:'images/shawarma.png'},
+    {id:'d8', name:'Deal #8', desc:'4 Zinger Burgers, 1L Drink', price:1690, cat:'Deals', tag:'Family', img:'images/burger.png'},
+    {id:'d9', name:'Deal #9', desc:'4 Signature Shawarmas, Fries, 1L Drink', price:1750, cat:'Deals', tag:'Family', img:'images/shawarma.png'},
     
     // BURGERS
     {id:'b1', name:'Chicken Burger', price:300, cat:'Burgers', tag:'Classic', img:'images/burger.png'},
