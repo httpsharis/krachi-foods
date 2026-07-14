@@ -306,8 +306,8 @@
     // 4. Send Order
     function sendOrder() {
         const finalArea = els.manualArea.value.trim() || userLocationStr || "Not provided";
-        let msg = `*NEW ORDER - KARACHI FOODS*%0A`;
-        msg += `------------------------%0A`;
+        let msg = `*NEW ORDER - KARACHI FOODS*\n`;
+        msg += `------------------------\n`;
         
         let subtotal = 0;
         Object.keys(cart).forEach(id => {
@@ -315,28 +315,29 @@
             const qty = cart[id];
             const lineTotal = item.price * qty;
             subtotal += lineTotal;
-            msg += `${qty}x ${item.name} - Rs ${lineTotal}%0A`;
+            msg += `${qty}x ${item.name} - Rs ${lineTotal}\n`;
         });
         
         const total = subtotal + config.deliveryFee;
-        msg += `------------------------%0A`;
-        msg += `Subtotal: Rs ${subtotal}%0A`;
-        msg += `Delivery: Rs ${config.deliveryFee}%0A`;
-        msg += `*TOTAL: Rs ${total}*%0A`;
-        msg += `------------------------%0A`;
-        msg += `*Deliver To:* ${finalArea}%0A`;
+        msg += `------------------------\n`;
+        msg += `Subtotal: Rs ${subtotal}\n`;
+        msg += `Delivery: Rs ${config.deliveryFee}\n`;
+        msg += `*TOTAL: Rs ${total}*\n`;
+        msg += `------------------------\n`;
+        msg += `*Deliver To:* ${finalArea}\n`;
         
         const notes = els.orderNotes.value.trim();
         if (notes) {
-            msg += `*Notes:* ${notes}%0A`;
+            msg += `*Notes:* ${notes}\n`;
         }
         
-        msg += `_Please confirm my order and delivery time._`;
+        msg += `\n_Please confirm my order and delivery time._`;
         
         const clicks = parseInt(safeStorageGet('kf_order_clicks') || '0', 10);
         safeStorageSet('kf_order_clicks', clicks + 1);
 
-        window.open(`https://wa.me/${config.waNumber}?text=${msg}`, '_blank');
+        const encodedMsg = encodeURIComponent(msg);
+        window.open(`https://wa.me/${config.waNumber}?text=${encodedMsg}`, '_blank');
     }
 
     // 5. Status & Interactions
