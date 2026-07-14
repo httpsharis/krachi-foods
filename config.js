@@ -27,9 +27,9 @@ window.KF_CONFIG = {
     {id:'d9', name:'Deal #9', desc:'4 Signature Shawarmas, Fries, 1L Drink', price:1750, cat:'Deals', tag:'Family', img:'images/deal_family_shawarmas.png'},
     
     // BURGERS
-    {id:'b1', name:'Chicken Burger', price:300, cat:'Burgers', tag:'Classic', img:'images/burger.png'},
-    {id:'b2', name:'Zinger Burger', price:390, cat:'Burgers', tag:'Bestseller', img:'images/burger.png'},
-    {id:'b3', name:'Zinger Tower', price:550, cat:'Burgers', tag:'Hungry', img:'images/burger.png'},
+    {id:'b1', name:'Chicken Burger', price:300, cat:'Burgers', tag:'Classic', img:'images/chicken_burger.png'},
+    {id:'b2', name:'Zinger Burger', price:390, cat:'Burgers', tag:'Bestseller', img:'images/zinger_burger.png'},
+    {id:'b3', name:'Zinger Tower', price:550, cat:'Burgers', tag:'Hungry', img:'images/zinger_tower.png'},
     {id:'b4', name:'Mighty Zinger', price:650, cat:'Burgers', tag:'Massive', img:'images/burger.png'},
     {id:'b5', name:'Chicken Patty Burger', price:330, cat:'Burgers', tag:'Light', img:'images/burger.png'},
     {id:'b6', name:'Beef Patty Burger', price:450, cat:'Burgers', tag:'Grill', img:'images/burger.png'},
