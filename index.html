@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karachi Foods — Order on WhatsApp, Johar Town Lahore</title>
+<meta name="description" content="Karachi Foods, Johar Town Lahore. Build your order, check delivery range, send it straight to WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <span>OPEN 24 HOURS FOR DELIVERY</span>
+    <span>JOHAR TOWN · LAHORE</span>
+    <span>QUICK BITES, ENDLESS DELIGHTS</span>
+    <span>DINE-IN & PICKUP AVAILABLE</span>
+    <span>OPEN 24 HOURS FOR DELIVERY</span>
+    <span>JOHAR TOWN · LAHORE</span>
+    <span>QUICK BITES, ENDLESS DELIGHTS</span>
+    <span>DINE-IN & PICKUP AVAILABLE</span>
+  </div>
+</div>
+
+<nav>
+  <div class="brand">Karachi Foods</div>
+  <div class="nav-links">
+    <a href="#menu">Menu</a>
+    <a href="#locate">Delivery range</a>
+    <a href="#status">Hours</a>
+  </div>
+  <a class="nav-call" href="tel:03413542699">CALL</a>
+</nav>
+
+<header class="hero">
+  <div class="chains"><div class="chain"></div><div class="chain"></div></div>
+  <div id="sign-parallax">
+    <div class="board">
+      <h1>KARACHI<span class="accent">FOODS</span></h1>
+      <div class="board-sub">QUICK BITES, ENDLESS DELIGHTS</div>
+    </div>
+  </div>
+  <div class="bulbs">
+    <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
+    <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
+  </div>
+  <div class="stars-row">
+    <span class="stars">★★★★★</span>
+    <span>Gulshan-e-Mustafa C-2 UMT Road</span>
+  </div>
+  <div class="hero-ctas">
+    <a class="btn-primary" href="#menu">Build your order</a>
+    <a class="btn-ghost" href="#locate">Check delivery range</a>
+  </div>
+</header>
+
+<section class="story reveal">
+  <div>
+    <div class="eyebrow">Johar Town Lahore</div>
+    <h2>Quick Bites, Served Hotter.</h2>
+    <p>Karachi Foods has been feeding Johar Town off the grill — burgers, zingers, pizzas and grilled bites, cooked to order, no shortcuts. This page does one job: get your order to the kitchen in one tap.</p>
+  </div>
+  <div class="story-card">
+    <div class="story-kv"><span class="k">Speciality</span><span>Grilled & fried burgers, Pizza</span></div>
+    <div class="story-kv"><span class="k">Neighbourhood</span><span>Johar Town, UMT Road</span></div>
+    <div class="story-kv"><span class="k">Delivery</span><span>Around 1000m, 24 hours</span></div>
+    <div class="story-kv"><span class="k">Contact</span><span>0341-3542699</span></div>
+  </div>
+</section>
+
+<section id="menu" class="reveal">
+  <div class="menu-head">
+    <div>
+      <div class="eyebrow">Digital menu</div>
+      <h2>Pick & add to your ticket</h2>
+    </div>
+    <div class="cat-tabs" id="cat-tabs"></div>
+  </div>
+  <div class="menu-grid" id="menu-grid"></div>
+</section>
+
+<section id="locate" class="reveal">
+  <div class="locate">
+    <div class="locate-inner">
+      <div>
+        <div class="eyebrow" style="color:var(--mustard);">Delivery range</div>
+        <h2>Are we close enough to reach you hot?</h2>
+        <p>We deliver around 1000m from C-2 UMT Road, Johar Town. Check your distance below — it gets added to your order automatically so the kitchen knows exactly where you are.</p>
+        <p id="delivery-terms" style="margin-top:8px; opacity:0.6;"></p>
+        <div class="locate-form" style="margin-top:18px;">
+          <button id="locate-btn" type="button">📍 Check my location</button>
+          <input id="manual-area" type="text" placeholder="Or just type your area, e.g. Township">
+          <div id="locate-result"></div>
+        </div>
+      </div>
+      <div class="radar"><div class="radar-pin" id="radar-pin"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="status" class="reveal">
+  <div class="status-grid">
+    <div class="status">
+      <div class="eyebrow">Kitchen status</div>
+      <div class="status-flag"><span class="beacon"></span> Delivery open</div>
+      <div class="status-note">Delivery runs 24 hours, every day</div>
+      <div class="status-flag" id="dinein-flag"><span class="beacon" id="dinein-beacon"></span> <span id="dinein-text">Checking hours…</span></div>
+      <div class="status-note">Dine-in & pickup, 24 Hours</div>
+      <div class="kv"><span class="k">Price range</span><span>Rs 50 – 1,890</span></div>
+      <div class="kv"><span class="k">Payment</span><span>Cash on Delivery</span></div>
+    </div>
+    <div class="status">
+      <div class="eyebrow">Find us</div>
+      <div class="kv"><span class="k">Address</span><span style="text-align:right; max-width:60%;">Gulshan-e-Mustafa C-2 UMT Road, Johar Town</span></div>
+      <div class="kv"><span class="k">Phone</span><span><a href="tel:03413542699" style="color:var(--maroon);">0341-3542699</a></span></div>
+      <div class="kv"><span class="k">Directions</span><span><a href="https://www.google.com/maps/search/?api=1&query=Karachi+Foods+Johar+Town+Lahore" target="_blank" rel="noopener" style="color:var(--maroon);">Open in Maps</a></span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="barcode"></div>
+  Gulshan-e-Mustafa C-2 UMT Road, Johar Town, Lahore<br>
+  <a href="tel:03413542699">0341 3542699</a> ·
+  <a href="http://wa.link/ef0w4a" target="_blank" rel="noopener">WhatsApp</a> ·
+  <a href="https://www.google.com/maps/search/?api=1&query=Karachi+Foods+Johar+Town+Lahore" target="_blank" rel="noopener">Directions</a>
+</footer>
+
+<button id="cart-fab" type="button" aria-label="Open your order ticket">
+  🧾 Ticket <span id="cart-count">0</span>
+</button>
+<div id="cart-overlay"></div>
+<div id="ticket-wrap">
+  <div class="ticket">
+    <div class="ticket-head">
+      <h2>YOUR ORDER TICKET</h2>
+      <button id="close-cart" aria-label="Close">✕</button>
+    </div>
+    <div id="cart-items"><div class="cart-empty">No items yet — add something from the menu.</div></div>
+    <div class="kv"><span class="k">Subtotal</span><span id="cart-subtotal">Rs 0</span></div>
+    <div class="kv"><span class="k">Delivery fee</span><span id="cart-fee">Rs 0</span></div>
+    <div class="ticket-total"><span>TOTAL</span><span id="cart-total">Rs 0</span></div>
+    <div id="min-order-warning" class="min-warning" hidden></div>
+    <div id="ticket-loc">📍 Location not checked yet — <a href="#locate" style="color:var(--maroon);">check delivery range</a> to include it in your order.</div>
+    <label for="order-notes" class="ticket-label">Any notes for the kitchen?</label>
+    <textarea id="order-notes" placeholder="e.g. extra spicy, call before arriving" rows="2"></textarea>
+    <button id="send-order" type="button" disabled>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.92C21.95 6.45 17.5 2 12.04 2zm5.8 14.19c-.24.68-1.4 1.33-1.93 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.56-1.17-2.98 0-1.42.75-2.11 1.01-2.4.26-.29.58-.36.77-.36.2 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.26 1.64 2.04 1.13 1.01 2.08 1.32 2.37 1.47.29.15.46.13.63-.08.17-.2.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.66.78 1.94.93.29.14.48.21.55.33.07.12.07.68-.17 1.35z"/></svg>
+      Send order on WhatsApp
+    </button>
+    <div class="ticket-note">Opens WhatsApp with your order and location pre-filled. Nothing is charged here — payment is confirmed with the shop.</div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
