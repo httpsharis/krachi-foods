@@ -48,7 +48,14 @@
         renderTabs();
         renderGrid();
         checkStatus();
-        loadStoredLocation();
+        
+        // Auto-locate if no saved location, else load saved
+        if (!safeStorageGet('kf_last_area')) {
+            handleLocate(true);
+        } else {
+            loadStoredLocation();
+        }
+        
         bindEvents();
         initParallaxEffects();
         initScrollReveal();
@@ -267,13 +274,17 @@
         return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)));
     }
 
-    async function handleLocate() {
-        els.locateResult.className = '';
-        els.locateResult.textContent = "Checking location...";
+    async function handleLocate(silent = false) {
+        if (!silent) {
+            els.locateResult.className = '';
+            els.locateResult.textContent = "Checking location...";
+        }
         
         if (!navigator.geolocation) {
-            els.locateResult.className = 'warn';
-            els.locateResult.textContent = "GPS not supported. Please type your area.";
+            if (!silent) {
+                els.locateResult.className = 'warn';
+                els.locateResult.textContent = "GPS not supported. Please type your area.";
+            }
             return;
         }
 
@@ -290,18 +301,24 @@
                 els.manualArea.value = area;
                 safeStorageSet('kf_last_area', area);
                 
-                els.locateResult.className = 'ok';
-                els.locateResult.innerHTML = `Located near <strong>${area}</strong> (~${dist.toFixed(1)}km away).`;
+                if (!silent) {
+                    els.locateResult.className = 'ok';
+                    els.locateResult.innerHTML = `Located near <strong>${area}</strong> (~${dist.toFixed(1)}km away).`;
+                }
                 updateTicketLocationDisplay();
             } catch (err) {
                 userLocationStr = "GPS Location Used";
-                els.locateResult.className = 'warn';
-                els.locateResult.textContent = `GPS found (~${dist.toFixed(1)}km away).`;
+                if (!silent) {
+                    els.locateResult.className = 'warn';
+                    els.locateResult.textContent = `GPS found (~${dist.toFixed(1)}km away).`;
+                }
                 updateTicketLocationDisplay();
             }
         }, () => {
-            els.locateResult.className = 'warn';
-            els.locateResult.textContent = "Could not get GPS. Please type your area.";
+            if (!silent) {
+                els.locateResult.className = 'warn';
+                els.locateResult.textContent = "Could not get GPS. Please type your area.";
+            }
         });
     }
 
@@ -411,7 +428,7 @@
         els.closeCartBtn.onclick = closeCart;
         els.cartOverlay.onclick = closeCart;
         
-        els.locateBtn.onclick = handleLocate;
+        els.locateBtn.onclick = () => handleLocate(false);
         els.manualArea.oninput = (e) => {
             userLocationStr = e.target.value;
             safeStorageSet('kf_last_area', userLocationStr);
